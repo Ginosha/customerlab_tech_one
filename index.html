@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Lab Digital Solution</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="container-fluid hdr">
+      <h4>View Audience</h4>
+    </div>
+    <div class="container savesegment">
+      <button id="show-segment" onclick="showPopup()">Save Segment</button>
+    </div>
+    <div id="popup">
+      <h5 class="hdr_popup">Saving Segment</h5>
+      <div class="seg_name">
+        <p>Enter the Segment name</p>
+        <input type="text" placeholder="Name of the Segment" />
+      </div>
+      <p class="seg_para">
+        To save your segment, you need to add the schemas to build the query
+      </p>
+      <p id="seg_btn">
+        <button onclick="showForm()">Add Schema to Segment</button>
+      </p>
+      <div id="seg_form">
+        <button class="close_btn" onclick="closeForm()">&times;</button>
+        <form action="">
+          <fieldset>
+            <table>
+                <tr>
+                    <td>
+                        First name:
+                    </td>
+                    <td>
+                        <input name="firstName" placeholder="First Name" required/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Last name:
+                    </td>
+                    <td>
+                        <input name="lastName" placeholder="Last Name" required/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Gender:
+                    </td>
+                    <td>
+                        <input type="radio" name="gender" value="male"  required/>Male
+                        <input type="radio" name="gender" value="male"  required/>Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Age:
+                    </td>
+                    <td>
+                        <input name="age" placeholder="Age"  required/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Account Number:
+                    </td>
+                    <td>
+                        <input name="acc" placeholder="Account Number" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        City:
+                    </td>
+                    <td>
+                        <input name="city" placeholder="City"  required/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        State:
+                    </td>
+                    <td>
+                        <input name="state" placeholder="State"  required/>
+                    </td>
+                </tr>
+            </table>
+          </fieldset>
+        </form>
+        <div class="add_new">
+            <a href="#">+ add new schema</a>
+        </div>
+      </div>
+      <div class="save_seg">
+        <table>
+            <tr>
+                <td>
+                    <button type="submit" class="btn">Save the Segment</button>
+                </td>
+                <td class="cancel_seg">
+                    <button type="button" class="btn cancel" onclick="closePopup()">Cancel</button>
+                </td>
+            </tr>
+        </table>
+      </div>
+      
+    </div>
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
